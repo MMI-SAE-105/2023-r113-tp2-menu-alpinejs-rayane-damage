@@ -13,7 +13,7 @@
     <header>
       <button aria-controls="mainNav" @click ="menuIsOpen = ! menuIsOpen">menu</button>
       <h1>Test de menu</h1>
-      <nav id="mainNav" x-show="menuIsOpen">
+      <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.400ms>
         <ul>
           <li><a href="#">item1</a></li>
           <li><a href="#">item2</a></li>

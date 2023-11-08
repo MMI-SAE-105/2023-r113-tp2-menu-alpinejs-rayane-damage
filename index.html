@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" : class="{noscroll:menuIsOpen,}">
+<html lang="fr" x-data="{menuIsOpen: false , loremIsOpen: false , dol1IsOpen: false , dol2IsOpen: false}" : class="{noscroll:menuIsOpen,}" >
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,6 +44,20 @@
         </ul>
       </nav>
     </header>
+    <nav>
+      <dl>
+        <dt aria-controls="secNav" @click ="loremIsOpen = ! loremIsOpen">Lorem.</dt>
+        <dd id="secNav" x-show="loremIsOpen" x-transition.duration.400ms >Lorem ipsum dolor sit amet.</dd>
+      </dl>
+      <dl>
+        <dt aria-controls="thirdNav" @click = "dol1IsOpen =! dol1IsOpen">Doloremque.</dt>
+        <dd id="thirdNav" x-show="dol1IsOpen" x-transition.duration.400ms>Inventore quo sunt ut culpa!</dd>
+      </dl>
+      <dl>
+        <dt aria-controls="fourthNav" @click = "dol2IsOpen =! dol2IsOpen">Doloremque.</dt>
+        <dd id="fourthNav" x-show="dol2IsOpen" x-transition.duration.400ms>Nihil accusantium ipsam dolor quae.</dd>
+      </dl>
+    </nav>
     <!-- h2>lorem2^p>lorem -->
     <h2>Lorem, ipsum.</h2>
     <p>

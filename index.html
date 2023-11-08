@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}">
+<html lang="fr" x-data="{menuIsOpen: false}" : class="{noscroll:menuIsOpen,}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,7 +7,8 @@
     <title>Test menu</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <style>
-      .menu {
+      .menu 
+      {
         position: fixed;
         top: 0;
         left: 0;
@@ -17,9 +18,15 @@
         display: grid;
         place-content: center;
       }
-      .header_menuBtn{
+      .header_menuBtn
+      {
         position: relative;
         z-index: 10;
+      }
+      .noscroll,
+      .noscroll body 
+      {
+        overflow: hidden;
       }
     </style>
   </head>
